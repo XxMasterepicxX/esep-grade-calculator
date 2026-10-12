@@ -74,4 +74,6 @@ gc.AddGrade("essay on ai ethics", 91, Essay)
 letter := gc.GetFinalGrade() // "A", "B", "C", "D", or "F"
 ```
 
+For a pass/fail course, use `NewPassFailGradeCalculator()` instead. `GetFinalGrade` then returns "Pass" for a C or better and "Fail" otherwise.
+
 Grades are whole numbers. Add at least one grade of each type before calling `GetFinalGrade`. An empty category makes the average divide by zero and the program panics.
